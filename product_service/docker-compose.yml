@@ -24,7 +24,7 @@ services:
   productapp-nginx:
     build: ./docker/nginx
     restart: always
-    expose:
+    ports:
       - "8001:80"
     volumes:
       - ./:/var/www
