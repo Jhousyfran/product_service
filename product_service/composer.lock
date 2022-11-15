@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "671e3daf0e8f633d390bf35a474b7146",
+    "content-hash": "1082771fb8350d1058565ff60064a2ae",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -990,6 +990,60 @@
                 }
             ],
             "time": "2021-11-21T21:41:47+00:00"
+        },
+        {
+            "name": "gruz/voyager-bread-generator",
+            "version": "1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gruz/voyager-bread-generator.git",
+                "reference": "686c3a6d6dbc35d223249548ca1a9f59f11fa1f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gruz/voyager-bread-generator/zipball/686c3a6d6dbc35d223249548ca1a9f59f11fa1f2",
+                "reference": "686c3a6d6dbc35d223249548ca1a9f59f11fa1f2",
+                "shasum": ""
+            },
+            "require": {
+                "tcg/voyager": "^1.0"
+            },
+            "require-dev": {
+                "laravel/laravel": "^5.5"
+            },
+            "type": "library",
+            "extra": {
+                "hook": {
+                    "providers": [
+                        "VoyagerBread\\BreadGeneratorServiceProvider"
+                    ]
+                },
+                "laravel": {
+                    "providers": [
+                        "VoyagerBread\\BreadGeneratorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VoyagerBread\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Ochoa",
+                    "email": "jeffer.8a@gmail.com"
+                }
+            ],
+            "description": "Create BREAD from the console using artisan",
+            "support": {
+                "source": "https://github.com/gruz/voyager-bread-generator/tree/1.1.3"
+            },
+            "time": "2018-06-26T06:26:23+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -8159,5 +8213,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.3.0"
 }

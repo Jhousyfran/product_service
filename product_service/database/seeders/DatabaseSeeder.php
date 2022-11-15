@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use VoyagerBread\Traits\BreadSeeder\ProductsBreadSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +14,5 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
     }
 }
