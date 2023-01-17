@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "671e3daf0e8f633d390bf35a474b7146",
+    "content-hash": "3a7eeeb31c6b5a4cbc1a7028c91e590d",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -1381,6 +1381,60 @@
                 }
             ],
             "time": "2021-12-16T16:49:26+00:00"
+        },
+        {
+            "name": "jhousyfran/voyager-bread-generator",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jhousyfran/voyager-bread-generator.git",
+                "reference": "2665e3247725735001b4eb61b2ee44324ffb572d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jhousyfran/voyager-bread-generator/zipball/2665e3247725735001b4eb61b2ee44324ffb572d",
+                "reference": "2665e3247725735001b4eb61b2ee44324ffb572d",
+                "shasum": ""
+            },
+            "require": {
+                "tcg/voyager": "^1.0"
+            },
+            "require-dev": {
+                "laravel/laravel": "^5.5"
+            },
+            "type": "library",
+            "extra": {
+                "hook": {
+                    "providers": [
+                        "VoyagerBread\\BreadGeneratorServiceProvider"
+                    ]
+                },
+                "laravel": {
+                    "providers": [
+                        "VoyagerBread\\BreadGeneratorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VoyagerBread\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Ochoa",
+                    "email": "jeffer.8a@gmail.com"
+                }
+            ],
+            "description": "Create BREAD from the console using artisan",
+            "support": {
+                "source": "https://github.com/Jhousyfran/voyager-bread-generator/tree/1.0.0"
+            },
+            "time": "2022-11-17T21:48:46+00:00"
         },
         {
             "name": "larapack/doctrine-support",
@@ -8159,5 +8213,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.3.0"
 }
