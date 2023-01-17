@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Traits\Uuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Traits\Uuid;
 
 class OrderItem extends Model
 {
@@ -21,12 +21,12 @@ class OrderItem extends Model
         'order_id',
         'product_id',
         'qtd',
-        'total'
+        'total',
     ];
 
     protected $casts = [
         'qtd' => 'int',
-        'total' => 'float'
+        'total' => 'float',
     ];
 
     public function product()
