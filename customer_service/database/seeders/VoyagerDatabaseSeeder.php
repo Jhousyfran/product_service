@@ -26,6 +26,7 @@ class VoyagerDatabaseSeeder extends Seeder
             // custom seeders voyage
             ProductsBreadSeeder::class,
             CustomersBreadSeeder::class,
+            OrdersBreadSeeder::class,
         ]);
     }
 }
