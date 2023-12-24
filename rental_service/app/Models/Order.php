@@ -20,14 +20,35 @@ class Order extends Model
         'id',
         'customer_id',
         'status',
+        'downpayment', #valor de entrada
         'discount',
+        'delivery_fee',
+        'late_fee', #taxa por atraso
         'total',
+        'balance', #saldo devedor
         'order_date',
+        'return_date', #data de devolucao do produto
+    ];
+
+    protected $casts = [
+        'order_date' => 'date',
+        'return_date' => 'date',
+        'total' => 'float',
+        'return_date' => 'float',
+        'discount' => 'float',
+        'delivery_fee' => 'float',
+        'late_fee' => 'float',
+        'balance' => 'float',
     ];
 
     public function items()
     {
         return $this->hasMany(OrderItem::class);
+    }
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
     }
 
     public function customer()

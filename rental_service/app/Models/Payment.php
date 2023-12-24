@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Product extends Model
+class Payment extends Model
 {
     use HasFactory;
     use SoftDeletes;
@@ -18,7 +18,19 @@ class Product extends Model
 
     protected $fillable = [
         'id',
-        'name',
-        'price',
+        'order_id',
+        'payment_type',
+        'description',
+        'amount',
+        'payment_date',
     ];
+
+    protected $casts = [
+        'payment_date' => 'date',
+    ];
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
 }

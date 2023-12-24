@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Traits\Uuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use App\Models\Traits\Uuid;
 
 class Customer extends Model
 {
@@ -21,10 +21,6 @@ class Customer extends Model
         'name',
         'email',
         'phone',
-        'address',
-        'city',
-        'state',
-        'zipcode'
     ];
 
     public function orders()

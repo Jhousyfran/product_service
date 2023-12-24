@@ -18,9 +18,14 @@ class CreateOrdersTable extends Migration
             $table->uuid('customer_id');
             $table->foreign('customer_id')->references('id')->on('customers');
             $table->string('status');
+            $table->double('downpayment');
             $table->double('discount');
-            $table->double('total');
+            $table->double('delivery_fee');
+            $table->double('late_fee');
+            $table->double('total')->default(0);
+            $table->double('balance')->default(0);
             $table->dateTime('order_date');
+            $table->dateTime('return_date');
             $table->timestamps();
             $table->softDeletes();
         });
